@@ -13,6 +13,10 @@ app.get('/home', function(req, res) {
   res.render('home')
 })
 
+app.get('/', function(req, res) {
+  res.redirect('/home')
+})
+
 app.get('/bo-lyrics', function(req, res) {
   // app.use(express.static(__dirname + '/home'))
   songsDb.find({}, function(error, songs) {
