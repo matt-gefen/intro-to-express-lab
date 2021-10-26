@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bo-lyrics.css">
   <title>Lyrics Page</title>
 </head>
 <body>
@@ -16,8 +17,14 @@
       <li>
         <%= song.title %>
           -
-        <%= song.playing ? 'Listening' : 'I don\'t wanna know' %>
+        <%= song.playing ? 'Currently Listening' : 'I don\'t wanna know' %>
+        <ul>
+          <li>
+            Lyric Excerpt: <%= song.lyric %>
+          </li>
+        </ul>
       </li>
+      
     <% }) %>
   </ul>
 </body>
