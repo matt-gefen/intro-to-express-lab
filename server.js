@@ -1,12 +1,13 @@
 import express from 'express'
 
 // create express app
-const app = express(app)
+const app = express()
 // configure the app
 app.set('view engine', 'ejs')
 
-app.get('/', function(req, res) {
-  res.send('<h1>Testing</h1>')
+app.get('/home', function(req, res) {
+  // app.use(express.static(__dirname + '/home'))
+  res.render('home/home')
 })
 
 app.listen(2000, function() {
