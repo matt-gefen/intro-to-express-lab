@@ -7,6 +7,18 @@
   <title>Lyrics Page</title>
 </head>
 <body>
-  <img src="https://c.tenor.com/VAbVimt_POcAAAAC/bo-burnham-inside.gif" alt="">
+  <h1>Inside an Album by Bo Burnham</h1>
+  <% if(error) { %>
+    <h2><%= error %></h2>
+  <% } %>
+  <ul>
+    <% songs.forEach(song => { %>
+      <li>
+        <%= song.title %>
+          -
+        <%= song.playing ? 'Listening' : 'I don\'t wanna know' %>
+      </li>
+    <% }) %>
+  </ul>
 </body>
 </html>
