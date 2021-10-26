@@ -4,8 +4,13 @@ import express from 'express'
 const app = express()
 // configure the app
 app.set('view engine', 'ejs')
+app.use(express.static('public'))
 
 app.get('/home', function(req, res) {
+  // app.use(express.static(__dirname + '/home'))
+  res.render('home')
+})
+app.get('/bo-lyrics', function(req, res) {
   // app.use(express.static(__dirname + '/home'))
   res.render('home/home')
 })
